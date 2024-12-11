@@ -1,5 +1,9 @@
+<script setup>
+import Navbar from '@/components/Navbar.vue' ;
+</script>
+
 <!--El template nos permite organizar codigo HTML-->
 <template>
-    <!--Hn es el tamaño de header que queremos utilizar-->
-    <h1 class = "text-2xl">Bienvenido</h1>
-</template>
+    <!--Utilizamos el componenete de Navbar-->
+    <Navbar/>
+</template> 

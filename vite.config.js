@@ -8,7 +8,13 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => ['md-linedivider'].includes(tag),
+        }
+      }
+    }),
     vueJsx(),
     VueDevTools(),
   ],
@@ -17,7 +23,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./WebPagePortafolio/src', import.meta.url)),
     }
   }
 })
